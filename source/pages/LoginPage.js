@@ -1,8 +1,6 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { render } from 'react-dom';
-import { NativeModules, StyleSheet, Text, View,ActivityIndicator } from 'react-native';
-
+import { StyleSheet, Text, View, TextInput } from 'react-native';
+import TextBox from '../components/TextBox'
 
 
 export default class PeoplePage extends React.Component {
@@ -20,7 +18,8 @@ export default class PeoplePage extends React.Component {
   render() {   
     return (
       <View style={estilo.container}>
-        <Text style={estilo.erro} > Login </Text>
+        <TextBox />
+        <TextBox />
       </View>
     );
   }
@@ -34,11 +33,6 @@ const estilo = StyleSheet.create({
     backgroundColor: '#7B7C7C',
     fontSize: 35
   },
-  erro:{
-    color:'red',
-    alignSelf: 'center',
-    fontSize: 50
-  }
 
 }); 
 
