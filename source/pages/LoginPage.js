@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput } from 'react-native';
-import TextBox from '../components/TextBox'
+import ViewRow from '../components/ViewRow'
 
 
 export default class PeoplePage extends React.Component {
@@ -18,8 +18,22 @@ export default class PeoplePage extends React.Component {
   render() {   
     return (
       <View style={estilo.container}>
-        <TextBox />
-        <TextBox />
+        <ViewRow>
+          
+          <TextInput
+            placeholder='Email: user@example.com'
+            style={estilo.textEntry}
+            placeholderTextColor='#8c8c8c'
+           />
+
+          <TextInput
+            placeholder='Senha: ******'
+            style={estilo.textEntry}
+            secureTextEntry
+            placeholderTextColor='#8c8c8c'
+           />
+
+        </ViewRow>
       </View>
     );
   }
@@ -28,10 +42,25 @@ export default class PeoplePage extends React.Component {
 
 const estilo = StyleSheet.create({
   container:{
-    flex: 1,
+    backgroundColor: 'black',
+    display: 'flex',
     justifyContent: 'center',
-    backgroundColor: '#7B7C7C',
-    fontSize: 35
+    flex: 1,
+  },
+  textEntry:{
+    marginTop: 15,
+    marginBottom: 5,
+    marginLeft: 15,
+    marginRight: 15,
+    borderRadius: 7,
+    paddingRight: 10,
+    paddingLeft: 10, 
+    paddingTop: 13,
+    paddingBottom: 13, 
+    backgroundColor: '#333333' ,
+    color: 'white',
+    
+
   },
 
 }); 
